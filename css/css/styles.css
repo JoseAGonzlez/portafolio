@@ -1,7 +1,11 @@
 *{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 0;
+    list-style: none;
     margin: 0px;
+    outline: 0px;
     padding: 0px;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 body{
@@ -11,55 +15,62 @@ body{
     background: url(img/fondo5.png) rgb(0, 0, 0);
 }
 
+#container{
+    width: 100%;
+    border: 0px solid green;
+}
+
 
 #content{
     min-height: 600px;
-    width: 1600px;
-    margin: 0px auto;
+    width: 78%;
     background: url(img/fondo5.png) rgb(0, 0, 0);
+    border: 0px solid red;
+    margin: 0px auto;
+    position: relative;
 }
+
+
 
 /*cabezera*/
 
 header{
+    display: block;
     width: 100%;
     height: 100px;
-    border: 0px solid rgb(255, 25, 25);
-
+    margin-top: 10px;
+    background: url(img/fondo5.png) black;
+    border: 0px solid red;
 }
-
-.clearfix{
-    float: none;
-    clear: both;
-}
-
 
 header ul{
-    height: 100%;
-    margin-bottom: 5px;
-    text-align: center;
-    background: url(img/fondo5.png) rgb(0, 0, 0);
-
+    display: block;
+    width: 85%;
+    margin: 20px auto;
+    text-align: right;
+    border: red 0px solid;
 }
 
 header ul li{
-    margin-top: 20px;
-    width: 100px;
-    height: 38px;
-    border: 0px solid red;
-    text-decoration: none;
-    list-style: none;
-    padding: 10px;
-    float: left;
-    position: relative;
-    left: 1257px;
+    display: inline-block;
+    text-align: center;
+    line-height:60px ;
+    margin-right: 10px;
+    border: red 0px solid;
+    width: 120px;
+    height: 80px;
+
 }
 
 header ul li a{
+    display: block;
+    height: inherit;
     text-decoration: none;
-    color:rgb(152, 152, 152); 
+    color: rgb(172, 172, 172);
+    transition: all 300ms;
+    border-radius: 3px;
+    margin: 10px;
     font-size: 20px;
-    list-style: none; 
 }
 
 header ul li a:hover{
@@ -242,7 +253,7 @@ span{
 }
 
 .articulo p:hover{
-    border: px solid red;
+    border: 0px solid red;
     color: rgb(204, 204, 204);
     cursor: pointer;
     margin-top: 30px;
@@ -310,17 +321,18 @@ span{
 /*Experiencia*/
 
 #experiencia{
+    width: 80%;
     height: 600px;
-    border: 0px solid red;
-    background:url(img/fondo5.png) rgb(0, 0, 0);;
+    border: 0px solid rgb(0, 255, 26);
+    background:url(img/fondo5.png) rgb(0, 0, 0);
+    margin: auto;
 }
 
 #experiencia h2{
     font-size: 25px;
     color: rgb(193, 193, 193);
-    position: relative;
-    left: 130px;
-    top: 80px;
+    text-align: left;
+
 }
 
 #experiencia h2:hover{
@@ -329,16 +341,17 @@ span{
 }
 
 .experiencia-marco{
-    width: 320px;
-    height: 320px;
+    width: 260px;
+    height: 350px;
     border: 0px solid red;
     background:rgb(51, 51, 51); 
     border-radius: 5px;
     float: left;
-    top: 110px;
-    position: relative;
-    left:120px ;
     margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 20px;
+    position: relative;
+    
 }
 
 .experiencia-marco:hover{
@@ -371,9 +384,9 @@ span{
 
 
 .experiencia-marco img{
-    margin-left: 130px;
-    margin-bottom: 20px;
     width: 70px;
+    margin-left: 37%;
+    
    
 }
 
@@ -381,17 +394,19 @@ span{
 /*Contacto*/
 
 #contacto{
-    border: 0px solid red;
+    width: 80%;
+    border: 0px solid rgb(0, 255, 119);
     height: 600px;
+    margin: auto;
+    position: relative;
    
 }
 
 #contacto h2{
     font-size: 25px;
     color: rgb(193, 193, 193);
-    position: relative;
-    top: 80px;
-    text-align: center;
+    text-align: left;
+    margin-left: 10px;
 }
 
 #contacto h2:hover{
@@ -402,14 +417,13 @@ span{
 .contact{
     width: 300px;
     height: 300px;
-    margin: 0px solid red;
     background:rgb(51, 51, 51); 
     float: left;
-    margin-left: 40px;
-    top: 120px;
-    position: relative;
-    left:270px ;
+    margin-left: 35px;
+    margin-top: 25px;
+    margin-right: 40px;
     border-radius: 10px;
+    
 }
 
 .contact:hover{
@@ -513,7 +527,126 @@ footer a:hover{
 }
 
 
+/*RESPONSIVE*/
+@media(max-width:514px){
+    
+   #content{
+       width: 100%;
+       border: 0px solid red;
+       position: relative;
+       bottom:  50px;
+   }
 
 
+   header{
+       border: 0px solid green;
+       height: 300px;
+   }
 
+   header ul{
+    display: block;
+    width: 85%;
+    border: red 0px solid;
+    }
 
+header ul li{
+    display: block;
+    text-align: center;
+    line-height:60px ;
+    border: red 0px solid;
+    width: 150px;
+    height: 60px;
+    margin: auto;
+
+}
+
+header ul li a{
+    display: block;
+    height: inherit;
+    text-decoration: none;
+    color: rgb(172, 172, 172);
+    transition: all 300ms;
+    border-radius: 3px;
+    margin: 10px;
+    font-size: 30px;
+}
+
+#logo {
+    width: 40px;
+    border: 0px solid red;
+    position: relative;
+    margin: auto;
+    margin-top: 70px;
+    margin-left: 170px;
+   
+    
+}
+
+.articulo{
+    position: relative;
+    left: 150px;
+    border: 0px solid red;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    left:  50px;
+    margin-top: 25px;
+}  
+
+.skill{
+    border: 0px solid yellow;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    left: 40px;
+    top: 25px;
+}
+.skill-marco{
+    margin-right: 40px;
+    margin-left: 25px;
+}
+
+#experiencia h2{
+   position: relative;
+   top: 50px;
+}
+
+.experiencia-marco{
+    position: relative;
+    top: 50px;
+    border: 0px solid red;
+    width: 90%;
+}
+
+#contacto h2{
+    position: relative;
+    top: 1600px;
+}
+
+.contact{
+    position: relative;
+    top:130px;
+}
+
+footer{
+  background: transparent;
+}
+
+.fotoFotter{
+    margin: auto;
+    width: 80px;
+    position: relative;
+    top: 250px;
+    left: 25px;
+}
+
+footer a{
+    margin: auto;
+    width: 80px;
+    padding: relative;
+    left: 200px;
+    bottom: 50px;
+    top: 10px;
+    margin-bottom: 10px;
+  
+}
